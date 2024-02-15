@@ -307,17 +307,4 @@
 	});
 
 
-	$(".hire-me-button").click(function() {
-		$('html,body').animate({
-			scrollTop: $(".contact-section").offset().top},
-			'slow');
-	});
-
-	$(".about-me-button").click(function() {
-		$('html,body').animate({
-			scrollTop: $(".about-me-section").offset().top},
-			'slow');
-	});
-
-
 }());
