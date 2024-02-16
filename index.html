@@ -136,7 +136,7 @@
                             <p>
                               <a
                                 href="#mySelf"
-                                class="btn btn-primary btn-learn about-me-button scroll"
+                                class="btn btn-primary btn-learn about-me-button my-self"
                                 >About Myself <i class="icon-briefcase3"></i
                               ></a>
                             </p>
@@ -234,7 +234,7 @@
                         </h2>
                         <a
                           href="#myContact"
-                          class="btn-hire hire-me-button scroll"
+                          class="btn-hire hire-me-button contact-me"
                           >Contact me</a
                         >
                       </div>
@@ -820,9 +820,9 @@
           </section>
 
           <section
+            id="myContact"
             class="colorlib-contact contact-section"
             data-section="contact"
-            id="myContact"
           >
             <div class="colorlib-narrow-content">
               <div class="row">
@@ -957,5 +957,18 @@
 
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
+
+    <!-- Custom JS code for scrolling -->
+    <script>
+      $(".contact-me, .my-self").click(function () {
+        var sectionTo = $(this).attr("href");
+        $("html, body").animate(
+          {
+            scrollTop: $(sectionTo).offset().top,
+          },
+          500
+        );
+      });
+    </script>
   </body>
 </html>
